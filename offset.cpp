@@ -1,3 +1,6 @@
+// Riley Wen
+// CIS 1202 ET1
+// July 31st, 2025
 #include <cctype>
 #include <iostream>
 using namespace std;
@@ -19,14 +22,33 @@ char character(char start, int offset){
 }
 int main(){
     try {
-        cout << "1" << ". " << character('Z', -1) << endl;
-        cout << "2" << ". " << character('a', 5) << endl;
-        cout << "3" << ". " << character('y', 4) << endl;
+        cout << "1" << ". " << character('a', 1) << endl;
     } catch(invalidRangeException){
         cout << "Invalid range!" << endl;
     } catch(invalidCharacterException) {
         cout << "Invalid character!" << endl;
     }
-    
+    try {
+        cout << "2" << ". " << character('a', -1) << endl;
+    } catch(invalidRangeException){
+        cout << "Invalid range!" << endl;
+    } catch(invalidCharacterException) {
+        cout << "Invalid character!" << endl;
+    }
+    try {
+        cout << "3" << ". " << character('Z', -1) << endl;
+    } catch(invalidRangeException){
+        cout << "Invalid range!" << endl;
+    } catch(invalidCharacterException) {
+        cout << "Invalid character!" << endl;
+    }
+    try {
+        cout << "1" << ". " << character('?', 5) << endl;
+    } catch(invalidRangeException){
+        cout << "Invalid range!" << endl;
+    } catch(invalidCharacterException) {
+        cout << "Invalid character!" << endl;
+    }
+
     return 0;
 }
